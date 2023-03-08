@@ -1,0 +1,5 @@
+package io.androidalatan.lifecycle.template.foobar.api
+
+import io.androidalatan.router.api.ComponentJourneyGuidance
+
+interface FoobarActivityJourneyGuidance: ComponentJourneyGuidance
