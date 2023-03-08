@@ -25,26 +25,6 @@ class MainActivityViewModel(lifecycleSource: LifecycleSource) : LifecycleListene
     val createText = MutableLiveData<String>()
 
     @ResumedToPause
-    fun endlessCounting(): Flow<String> {
-        return (0..Int.MAX_VALUE).asFlow()
-            .onEach { delay(1000) }
-            .map { "ResumedToPause/endlessCounting : $it" }
-            .onEach {
-                resumeText.value = it
-            }
-    }
-
-    @CreatedToDestroy
-    fun endlessCounting2(): Flow<String> {
-        return (0..Int.MAX_VALUE).asFlow()
-            .onEach { delay(500) }
-            .map { "CreatedToDestroy/endlessCounting : $it" }
-            .onEach {
-                createText.value = it
-            }
-    }
-
-    @ResumedToPause
     fun observeClick(viewInteractionStream: ViewInteractionStream, router: Router): Flow<Long> {
         return viewInteractionStream.asFlow()
             .flatMapLatest { it.find(clickId).onClickAsFlow() }

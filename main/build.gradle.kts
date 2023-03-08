@@ -15,6 +15,7 @@ dependencies {
     implementation(libs.alatan.alerts.common.dialog.api)
     implementation(libs.alatan.resourceprovider.api)
 
+    implementation(libs.image.coil)
     implementation(libs.dagger.android)
     implementation(libs.dagger.base)
     implementation(libs.common.javaX)

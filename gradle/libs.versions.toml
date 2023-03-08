@@ -62,6 +62,9 @@ alatan-lifecyclecomponents = "0.1.11"
 # https://github.com/google/dagger
 dagger = "2.45"
 
+# https://github.com/coil-kt/coil
+image-coil = "2.2.2"
+
 
 # test
 # https://github.com/powermock/powermock
@@ -71,6 +74,8 @@ test-junit4 = "4.13"
 test-mockito = "5.1.1"
 # https://github.com/mockito/mockito-kotlin
 test-mockitoKotlin = "4.1.0"
+# https://assertj.github.io/
+test-assertj = "3.24.2"
 
 [libraries]
 kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
@@ -154,9 +159,12 @@ alatan-alerts-common-dialog-impl = { module = "com.github.android-alatan.alerts:
 alatan-alerts-common-dialog-assertion = { module = "com.github.android-alatan.alerts:common-dialog-assertion", version.ref = "alatan.alerts" }
 alatan-alerts-compose-dialog-api = { module = "com.github.android-alatan.alerts:compose-dialog-api", version.ref = "alatan.alerts" }
 alatan-alerts-compose-dialog-impl = { module = "com.github.android-alatan.alerts:compose-dialog", version.ref = "alatan.alerts" }
+alatan-alerts-compose-dialog-assertion = { module = "com.github.android-alatan.alerts:compose-dialog-assertion", version.ref = "alatan.alerts" }
 alatan-alerts-toast-impl = { module = "com.github.android-alatan.alerts:app-toast", version.ref = "alatan.alerts" }
 alatan-alerts-toast-api = { module = "com.github.android-alatan.alerts:app-toast-api", version.ref = "alatan.alerts" }
 alatan-alerts-toast-assertion = { module = "com.github.android-alatan.alerts:app-toast-assertion", version.ref = "alatan.alerts" }
+
+image-coil = { module = "io.coil-kt:coil-compose", version.ref = "image.coil" }
 
 # plugin
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -183,6 +191,8 @@ test-powermock-mockito = { module = "org.powermock:powermock-api-mockito2", vers
 test-androidxTest-core = { module = "androidx.test:core", version.ref = "androidxTest-core" }
 test-androidxTest-runner = { module = "androidx.test:runner", version.ref = "androidxTest-core" }
 test-androidxTest-junit = { module = "androidx.test.ext:junit", version.ref = "androidxTest-junit" }
+
+test-assertj-core = { module = "org.assertj:assertj-core", version.ref = "test.assertj" }
 
 # verify
 verify-detektFormatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }

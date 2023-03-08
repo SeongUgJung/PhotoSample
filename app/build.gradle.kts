@@ -67,18 +67,10 @@ dependencies {
     implementation(libs.compose.runtimeLiveData)
     implementation(libs.compose.material)
 
-    implementation(libs.alatan.preferences.annotation)
-    implementation(libs.alatan.preferences.api)
-    implementation(libs.alatan.preferences.builder)
-
-    implementation(libs.alatan.resourceprovider.impl)
     implementation(libs.alatan.alerts.compose.dialog.impl)
     implementation(libs.alatan.alerts.common.dialog.impl)
-
-    implementation(libs.alatan.preferences.annotation)
-    implementation(libs.alatan.preferences.api)
-    implementation(libs.alatan.preferences.builder)
-
+    implementation(libs.alatan.resourceprovider.impl)
+    implementation(libs.alatan.resourceprovider.api)
 
     implementation(libs.common.javaX)
     implementation(libs.dagger.base)

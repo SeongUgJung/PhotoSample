@@ -12,11 +12,12 @@ dependencies {
     implementation(platform(libs.alatan.lifecycle.compose.activity))
     implementation(libs.alatan.lifecycle.composable.holder)
     implementation(projects.foobarApi)
-    implementation(projects.subFoo)
-    implementation(projects.subBar)
+    implementation(projects.valueHolder)
 
     implementation(libs.alatan.alerts.common.dialog.api)
     implementation(libs.alatan.resourceprovider.api)
+
+    implementation(libs.image.coil)
 
     implementation(libs.dagger.android)
     implementation(libs.dagger.base)
@@ -25,5 +26,14 @@ dependencies {
     kapt(libs.dagger.baseCompiler)
 
     implementation(libs.compose.material)
-    implementation(libs.compose.runtimeLiveData)
+    implementation(libs.compose.runtime)
+
+    testImplementation(libs.alatan.lifecycle.handler.assertion)
+    testImplementation(libs.alatan.lifecycle.viewevent.assertion)
+    testImplementation(libs.alatan.lifecycle.router.assertion)
+    testImplementation(libs.alatan.lifecycle.resulthandler.assertion)
+    testImplementation(libs.alatan.alerts.compose.dialog.assertion)
+    testImplementation(libs.test.turbine)
+    testImplementation(libs.test.coroutineTest)
+    testImplementation(libs.test.assertj.core)
 }

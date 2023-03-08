@@ -22,8 +22,9 @@ dependencyResolutionManagement {
 }
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-rootProject.name = "LifecycleComponentTemplate"
+rootProject.name = "PhotoSample"
 include(":app")
 include(":main")
-include(":foobar", ":foobar-api", ":sub-foo", ":sub-bar")
+include(":foobar", ":foobar-api")
+include(":value-holder")
 

@@ -9,6 +9,8 @@ import dagger.multibindings.IntoMap
 import io.androidalatan.lifecycle.template.foobar.FoobarActivity
 import io.androidalatan.lifecycle.template.foobar.FoobarActivityJourneyGuidanceImpl
 import io.androidalatan.lifecycle.template.foobar.api.FoobarActivityJourneyGuidance
+import io.androidalatan.lifecycle.template.foobar.image.PickImageGalleryJourneyGuidance
+import io.androidalatan.lifecycle.template.foobar.image.PickImageGalleryJourneyGuidanceImpl
 import io.androidalatan.router.api.GuidanceBuilderFactory
 import io.androidalatan.router.api.JourneyKey
 
@@ -29,5 +31,11 @@ interface FoobarActivityInjectorModule {
         @JourneyKey(FoobarActivityJourneyGuidance::class)
         fun foobarActivityJourneyGuidance(): GuidanceBuilderFactory =
             GuidanceBuilderFactory { FoobarActivityJourneyGuidanceImpl(it) }
+
+        @Provides
+        @IntoMap
+        @JourneyKey(PickImageGalleryJourneyGuidance::class)
+        fun pickImageGalleryJourneyGuidance(): GuidanceBuilderFactory =
+            GuidanceBuilderFactory { PickImageGalleryJourneyGuidanceImpl(it) }
     }
 }

@@ -28,7 +28,7 @@ object MainActivityUi {
             Text(text = createText)
             val interactionTrigger = LocalComposeEventTriggerOwner.current
             Button(onClick = interactionTrigger.onClick(MainActivityViewModel.clickId)) {
-                Text(text = "FooBar Screen")
+                Text(text = "Go to Image Screen")
             }
         }
 
